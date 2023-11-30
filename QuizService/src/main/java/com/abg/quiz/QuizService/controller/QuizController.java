@@ -2,6 +2,7 @@ package com.abg.quiz.QuizService.controller;
 
 import com.abg.quiz.QuizService.client.QuizFeign;
 import com.abg.quiz.QuizService.service.IncriptionService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -28,6 +29,7 @@ public class QuizController {
         return feign.getQ();
     }
 
+
     private Instant oldInstant;
     @GetMapping("/ens")
     public String encryptionTest() {
@@ -38,12 +40,12 @@ public class QuizController {
 
         // Assuming you have two timestamps
         Instant timestamp1 = Instant.parse("2023-11-30T12:34:56Z");
-        if(oldInstant != null){
-            timestamp1 =oldInstant;
+        if (oldInstant != null) {
+            timestamp1 = oldInstant;
         }
 
         Instant timestamp2 = Instant.now(); // Current timestamp
-        System.out.println("Current time :"+timestamp2.toString());
+        System.out.println("Current time :" + timestamp2.toString());
         oldInstant = timestamp2;
         // Calculate the time difference
         Duration duration = Duration.between(timestamp1, timestamp2);

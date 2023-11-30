@@ -1,0 +1,35 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:/test_db?currentSchema=gateway
+    username: postgres
+    password: postgres
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          lower-case-service-id: true
+          enabled: true
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+      httpclient:
+        connect-timeout: 120000
+        response-timeout: 120s
+
+redis:
+  host: 10.11.245.12
+  port: 6379
+  password: p0cket@ABG
+  database:
+    index: 8
+  pool:
+    max:
+      connection: 50
+      idle:
+        connection: 10
+    min:
+      idle:
+        connection: 0
