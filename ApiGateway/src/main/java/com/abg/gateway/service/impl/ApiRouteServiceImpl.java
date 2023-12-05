@@ -16,9 +16,10 @@ import reactor.core.publisher.Flux;
 public class ApiRouteServiceImpl implements IApiRouteService {
     @Autowired
     private ApiRouteRepository apiRouteRepository;
+
     @Override
     public Flux<ApiRoute> findApiRoutes() {
-        return null;
+        return apiRouteRepository.findAll();
     }
 
     @Override

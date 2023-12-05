@@ -1,6 +1,7 @@
-package com.brainstation23.admin.common.annotations;
+package com.abg.quiz.QuizService.common.annotation;
 
-import com.brainstation23.admin.domain.enums.AdminFeatureEnum;
+
+import com.abg.quiz.QuizService.common.enums.AdminFeatureEnum;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

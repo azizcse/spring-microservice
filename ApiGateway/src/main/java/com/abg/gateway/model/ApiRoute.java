@@ -15,7 +15,7 @@ import org.springframework.data.relational.core.mapping.Table;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "API_ROUTE")
+@Table(name = "API_GATEWAY")
 public class ApiRoute {
 
     @Id

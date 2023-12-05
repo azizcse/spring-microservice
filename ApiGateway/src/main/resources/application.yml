@@ -1,6 +1,10 @@
+server:
+  port: 8765
 spring:
+  application:
+    name: GATEWAY-SERVICE
   r2dbc:
-    url: r2dbc:postgresql://localhost:/test_db?currentSchema=gateway
+    url: r2dbc:postgresql://localhost:/bank_db?currentSchema=gateway
     username: postgres
     password: postgres
   cloud:
