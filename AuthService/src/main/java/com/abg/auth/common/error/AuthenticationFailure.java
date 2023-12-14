@@ -21,7 +21,9 @@ public class AuthenticationFailure implements AuthenticationEntryPoint {
     Logger logger = LoggerFactory.getLogger(AuthenticationFailure.class);
 
     @Override
-    public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, ServletException {
+    public void commence(HttpServletRequest request,
+                         HttpServletResponse response,
+                         AuthenticationException authException) throws IOException, ServletException {
         logger.info("Secured api called.....");
     }
     // Class content
