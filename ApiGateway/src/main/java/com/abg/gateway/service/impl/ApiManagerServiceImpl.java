@@ -43,6 +43,7 @@ public class ApiManagerServiceImpl implements RouteLocator {
     private Buildable<Route> setPredicateSpec(ApiRoute apiRoute,
                                               PredicateSpec predicateSpec,
                                               GatewayFilter gatewayFilter) {
+        System.out.println("Build route called for :" + apiRoute.getUri());
 
         BooleanSpec booleanSpec = predicateSpec.path(apiRoute.getPath());
         if (StringUtils.hasLength(apiRoute.getMethod()))
